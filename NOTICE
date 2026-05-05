@@ -1,0 +1,39 @@
+drug-perturbation-benchmark — Vendored Model License Notice
+
+This project is licensed under the MIT License (see LICENSE at repository
+root). Vendored upstream models under models/ retain their original
+licenses, which may differ from the project's MIT. The following table
+summarizes the license status of each vendored model:
+
+  Model      Upstream commit                            License
+  --------   ----------------------------------------   --------------------
+  CIGER      81c16f107cf957ca73840e6fab41de174c85ee8f   no upstream license declaration
+  DeepCE     9b0d04fa920ef73df578b070cfcc3982effdde42   no upstream license declaration
+  MultiDCP   36ecdef9598de703b61fe0d1b91bcfeeba844274   CC BY-NC 4.0 (non-commercial)
+  PertDiT    596d681f816d3184d7a0a63a133ce68d5838fae0   Apache 2.0 (declared in README;
+                                                          see models/PertDiT/LICENSE.NOTICE)
+  PRnet      f19174bde3ed2633f54c7831799cc38c4ffc7a0d   Apache 2.0
+  TranSiGen  8ec2218e2fe4fbb5f3a2c14271a8640a62c1af3a   MIT (Copyright 2023 myzheng-SIMM)
+  XPert      d53ff497e465692c80fac7b899e3cc5cc8e7bfed   MIT (Copyright 2025 Guo Yue)
+
+Important caveats:
+
+1. MultiDCP is licensed CC BY-NC 4.0, which restricts commercial use.
+   Users intending to apply this project in commercial contexts must either
+   obtain separate permission from MultiDCP authors or exclude that
+   subdirectory.
+
+2. CIGER and DeepCE upstream repositories ship without LICENSE files or
+   README license declarations. Vendoring at the pinned commits is
+   conducted in good faith for academic reproducibility, with full
+   attribution in reference/PROVENANCE.md. Users seeking redistribution
+   rights for these models should contact original authors:
+       - CIGER / DeepCE: Thai-Hoang Pham (Ohio State University)
+
+3. PertDiT does not include a LICENSE file at the pinned commit, but
+   the README declares Apache 2.0. See models/PertDiT/LICENSE.NOTICE
+   for the verbatim quote and source pointer.
+
+This NOTICE is informational and does not modify the legal terms of any
+upstream license. Where upstream license terms are silent (CIGER, DeepCE),
+users are advised to err on the side of caution.

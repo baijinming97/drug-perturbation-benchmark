@@ -1,0 +1,16 @@
+PertDiT — License Notice
+
+The upstream PertDiT repository
+(https://github.com/wangkekekeke/PertDiT @ 596d681f816d3184d7a0a63a133ce68d5838fae0)
+does not contain a LICENSE file at the pinned commit.
+
+However, the upstream README explicitly states:
+
+    ## License
+    This project is covered under the Apache 2.0 License.
+
+Source: README.md, accessed at the pinned commit above.
+
+This vendored copy is therefore distributed under the same Apache 2.0
+terms as declared by upstream. Users seeking explicit redistribution
+rights should contact upstream authors directly.

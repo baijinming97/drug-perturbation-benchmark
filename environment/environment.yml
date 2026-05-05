@@ -1,0 +1,27 @@
+# Single conda env covering all 7 training shims:
+#   CIGER, DeepCE, MultiDCP, PertDiT, PRnet, TranSiGen, XPert (+ MLP baseline).
+#
+# Build it with:
+#   conda env create -f environments/environment.yml
+#   conda activate benchmark
+#   bash environments/install_pip.sh        # installs pip-only deps (order matters)
+#
+# This file pins exact versions verified working in the parent xpert env that
+# successfully ran 5 of the 7 models across all benchmark tasks. PertDiT and
+# TranSiGen were originally trained in different envs (pertdit @ torch 1.13,
+# smart @ Python 3.11); the benchmark env is a single-env attempt to host all
+# 7. Per-model fallbacks live in environments/<M>_fallback.yml.
+
+name: benchmark
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - git           # for any optional pip packages from git
+  - unrar         # required by experiments/original_ablation/prepare.py to
+                  # extract data/PertDiT/lincs_l1000.h5ad (RAR archive)
+  # NOTE: All ML deps (torch, flash-attn, torch_geometric, etc.) are pip-only.
+  #       See install_pip.sh — torch wheels bundle their own CUDA 12.1 runtime.
+  #       The system already provides nvidia driver + CUDA 12.x libs.
